@@ -1,0 +1,36 @@
+[
+    {
+        "name": "Lights control",
+        "id": "eb6f9bf3a0d35477e5jpua",
+        "key": "BgPx)~6PD/BG7hIw",
+        "mac": "68:57:2d:53:48:e7",
+        "uuid": "d4ff59a9f01a3cda",
+        "category": "cz",
+        "product_name": "Smart Socket",
+        "product_id": "octeoqhuayzof69q",
+        "biz_type": 18,
+        "model": "SP10\uff08T112 PIN\uff09-FTY",
+        "sub": false,
+        "icon": "https://images.tuyaus.com/smart/icon/ay1514359068372Hd98B/9c4ebba5c74630f9d6a8d90092336ee6.jpg",
+        "mapping": {
+            "1": {
+                "code": "switch_1",
+                "type": "Boolean",
+                "values": {}
+            },
+            "11": {
+                "code": "countdown_1",
+                "type": "Integer",
+                "values": {
+                    "unit": "s",
+                    "min": 0,
+                    "max": 86400,
+                    "scale": 0,
+                    "step": 1
+                }
+            }
+        },
+        "ip": "192.168.0.103",
+        "version": "3.3"
+    }
+]

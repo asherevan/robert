@@ -1,0 +1,65 @@
+{
+    "result": [
+        {
+            "active_time": 1782682354,
+            "biz_type": 18,
+            "category": "cz",
+            "create_time": 1782681088,
+            "icon": "smart/icon/ay1514359068372Hd98B/9c4ebba5c74630f9d6a8d90092336ee6.jpg",
+            "id": "eb6f9bf3a0d35477e5jpua",
+            "ip": "67.1.149.84",
+            "lat": "32.18",
+            "local_key": "BgPx)~6PD/BG7hIw",
+            "lon": "-110.77",
+            "model": "SP10\uff08T112 PIN\uff09-FTY",
+            "name": "Lights control",
+            "online": true,
+            "owner_id": "304938016",
+            "product_id": "octeoqhuayzof69q",
+            "product_name": "Smart Socket",
+            "status": [
+                {
+                    "code": "switch_1",
+                    "value": false
+                },
+                {
+                    "code": "countdown_1",
+                    "value": 0
+                }
+            ],
+            "sub": false,
+            "time_zone": "-07:00",
+            "uid": "az1782682159071aDNqc",
+            "update_time": 1782682654,
+            "uuid": "d4ff59a9f01a3cda",
+            "mapping": {
+                "1": {
+                    "code": "switch_1",
+                    "type": "Boolean",
+                    "values": {}
+                },
+                "11": {
+                    "code": "countdown_1",
+                    "type": "Integer",
+                    "values": {
+                        "unit": "s",
+                        "min": 0,
+                        "max": 86400,
+                        "scale": 0,
+                        "step": 1
+                    }
+                }
+            }
+        }
+    ],
+    "success": true,
+    "t": 1782684437948,
+    "tid": "ba2a73d0733d11f1b8a84e794d19accb",
+    "file": {
+        "name": "tuya-raw.json",
+        "description": "Full raw list of Tuya devices.",
+        "account": "8kgffshd3t3dnguqy8um",
+        "date": "2026-06-28T15:07:18.796060",
+        "tinytuya": "1.18.1"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "current_time": {
+        "type": "time",
+        "median": 360,
+        "name": "time_interval"
+    },
+    "user_command": {
+        "type": "string",
+        "median": "",
+        "urgency": "max"
+    },
+    "light_level": {
+        "type": "integer",
+        "median": 250
+    },
+    "user_present": {
+        "type": "bool"
+    }
+}
