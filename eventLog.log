@@ -1,5 +1,5 @@
-[2026-07-08 16:17:36] voice_command {
+[2026-08-22 20:19:26] voice_command {
 	Source: voice
 	Data:
-		text: Hello, world!
+	    text: go away
 }

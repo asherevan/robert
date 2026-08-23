@@ -1,11 +1,10 @@
 import datetime
-import requests
 import robertutils
 import time
 
 interval = 10
 
-event_threshold = 60 * 30 # Every 30 minutes, send an event
+event_threshold = 60 * 60 # Every 60 minutes, send an event
 
 
 old_now = time.time()
@@ -18,5 +17,6 @@ while True:
 
     if now - old_now > event_threshold:
         old_now = now
+        robertutils.send_event('time', 'time_interval', {})
 
-    time.sleep(interval) # Wait <interval> seconds
+    time.sleep(interval) # Wait 10 seconds

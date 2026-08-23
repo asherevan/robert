@@ -1,7 +1,7 @@
 import json
 import queue
 import time
-import requests
+import robertutils
 
 import numpy as np
 import sounddevice as sd
@@ -11,7 +11,6 @@ from vosk import KaldiRecognizer
 
 from openwakeword.model import Model as OWWModel
 import soxr
-import uuid
 
 
 ############################################################
@@ -54,30 +53,6 @@ last_voice_time = 0
 TIMEOUT = 10
 
 last_sleep_time = 0
-
-############################################################
-# Helpers
-############################################################
-
-def submit_event(text):
-
-    event = {
-        "source": 'voice',
-        "type": "voice_command",
-        "timestamp": str(time.time()),
-        "data": {
-            "text": text
-        }
-    }
-
-    try:
-        requests.post(
-            "http://127.0.0.1/submit",
-            json=event,
-            timeout=0.5
-        )
-    except Exception as e:
-        print(e)
 
 ############################################################
 # Audio callback
@@ -182,7 +157,7 @@ while True:
             )['text']
             if result != '':
                 print(result)
-                submit_event(result)
+                robertutils.send_event('voice', 'voice_command', {'text': result}, priority='high')
 
                 last_voice_time = time.monotonic()
 
