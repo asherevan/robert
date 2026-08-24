@@ -83,7 +83,8 @@ def timed_send_world_state():
 
         for i in always_sent:
             try:
-                to_be_sent[i] = world_state[i]
+                to_be_sent[i] = world_state[i]['value']
+                print(to_be_sent)
             except KeyError:
                 print('Always sent key "' + str(i) +'" is not currently available')
 

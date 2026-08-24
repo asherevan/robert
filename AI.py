@@ -9,6 +9,7 @@ from threading import Thread
 from queue import Queue
 import json
 import time
+import requests
 
 app = Flask(__name__)
 
@@ -63,31 +64,55 @@ def world_state_update():
     return 'OK'
 
 @app.route('/tools', methods=['POST'])
-def give_tools():
+def get_tools():
     global tools
     tools = request.get_json()
+    return 'OK'
 
 def ask_groq(prompt):
-    print(prompt)
+    messages = message_history + [{
+        "role": "user",
+        "content": prompt
+    }]
 
-def ask_groq_fake(prompt):
-# def ask_groq(prompt):
-    message = [{
-            "role": "user",
-            "content": prompt
-        }]
-    
-    response = client.chat.completions.create(
-        model=model,
-        messages=system_prompt + message_history + message,
-        tools=tools,
-        tool_choice='auto',
-        temperature=0.3,
-        max_completion_tokens=512
+    while True:
+        response = client.chat.completions.create(
+            model=model,
+            messages=system_prompt + messages,
+            tools=tools,
+            tool_choice='auto',
+            temperature=0.3,
+            max_completion_tokens=512
         )
 
-    print(response.choices[0])
-    return response.choices[0].message
+        assistant_message = response.choices[0].message
+        tool_calls = assistant_message.tool_calls or []
+
+        if not tool_calls:
+            message_history.extend(messages[len(message_history):])
+            message_history.append(assistant_message.model_dump(exclude_none=True))
+            print(response.choices[0])
+            return assistant_message
+
+        assistant_message_dict = assistant_message.model_dump(exclude_none=True)
+        messages.append(assistant_message_dict)
+
+        for tool_call in tool_calls:
+            tool_arguments = json.loads(tool_call.function.arguments or '{}')
+            tool_response = requests.post(
+                'http://127.0.0.1:5002/run',
+                json={
+                    'name': tool_call.function.name,
+                    'args': tool_arguments
+                },
+                timeout=10
+            )
+            tool_response.raise_for_status()
+            messages.append({
+                'role': 'tool',
+                'tool_call_id': tool_call.id,
+                'content': tool_response.text
+            })
 
 def process_immediately(event):
     global waiting_events_queue

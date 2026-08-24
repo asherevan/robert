@@ -2,7 +2,7 @@ model = 'openai/gpt-oss-20b'
 
 memory_db = 'memory/memories.json'
 
-always_sent = ['time']
+always_sent = ['current_time']
 
 update_time = 5
 

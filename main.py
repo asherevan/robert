@@ -6,6 +6,10 @@ Robert Main Control Hub
 - Comprehensive logging and status reporting
 """
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 import sys
 import traceback
 import time

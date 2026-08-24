@@ -2,4 +2,100 @@
 	Source: voice
 	Data:
 	    text: go away
+}[2026-08-23 18:50:58] voice_command {
+	Source: voice
+	Data:
+	    text: sentiment
+}[2026-08-23 18:51:01] voice_command {
+	Source: voice
+	Data:
+	    text: send an event
+}[2026-08-23 18:51:08] voice_command {
+	Source: voice
+	Data:
+	    text: oh no way and i
+}[2026-08-23 18:52:22] voice_command {
+	Source: voice
+	Data:
+	    text: oh i did i
+}[2026-08-23 18:52:32] voice_command {
+	Source: voice
+	Data:
+	    text: how did not what i said
+}[2026-08-23 18:52:36] voice_command {
+	Source: voice
+	Data:
+	    text: not
+}[2026-08-23 18:52:38] voice_command {
+	Source: voice
+	Data:
+	    text: what
+}[2026-08-23 18:52:40] voice_command {
+	Source: voice
+	Data:
+	    text: are you thing
+}[2026-08-23 18:52:43] voice_command {
+	Source: voice
+	Data:
+	    text: what are you saying i'm saying
+}[2026-08-23 18:52:48] voice_command {
+	Source: voice
+	Data:
+	    text: this is it
+}[2026-08-23 18:52:51] voice_command {
+	Source: voice
+	Data:
+	    text: galloway
+}[2026-08-23 18:52:54] voice_command {
+	Source: voice
+	Data:
+	    text: go away
+}[2026-08-23 20:00:36] voice_command {
+	Source: voice
+	Data:
+	    text: he nodded
+}[2026-08-23 20:00:38] voice_command {
+	Source: voice
+	Data:
+	    text: go away
+}[2026-08-23 20:00:40] voice_command {
+	Source: voice
+	Data:
+	    text: what is your name
+}[2026-08-23 20:35:45] voice_command {
+	Source: voice
+	Data:
+	    text: who are you
+}[2026-08-23 20:51:51] voice_command {
+	Source: voice
+	Data:
+	    text: turn up the like
+}[2026-08-23 20:51:58] voice_command {
+	Source: voice
+	Data:
+	    text: turn on the like
+}[2026-08-23 20:52:38] voice_command {
+	Source: voice
+	Data:
+	    text: what is your name
+}[2026-08-23 20:53:51] voice_command {
+	Source: voice
+	Data:
+	    text: what did your name
+}[2026-08-23 20:59:30] voice_command {
+	Source: voice
+	Data:
+	    text: what is your name
+}[2026-08-23 21:01:56] voice_command {
+	Source: voice
+	Data:
+	    text: you are you
+}[2026-08-23 21:07:08] voice_command {
+	Source: voice
+	Data:
+	    text: what is your name
+}[2026-08-23 21:17:18] voice_command {
+	Source: voice
+	Data:
+	    text: what is your name
 }

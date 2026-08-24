@@ -97,6 +97,9 @@ class Service:
         
     def start(self) -> bool:
         """Start the service"""
+        if self.is_running and self.process and self.process.poll() is None:
+            self.logger.info(f"Service {self.name} is already running")
+            return True
         if self.paused:
             self.logger.info("Start skipped because service is paused")
             return False
